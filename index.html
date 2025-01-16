@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>File-Sync</title>
+</head>
+<body>
+    <div class="container">
+        <h1>File Transfer System</h1>
+        
+        <div class="source-section">
+            <h2>Source File</h2>
+            <input type="file" id="sourceFile" class="file-input">
+            <div class="file-path">
+                <input type="text" id="sourcePath" placeholder="Source file path" readonly>
+                <button onclick="browseSource()">Browse</button>
+            </div>
+        </div>
+
+        <div class="destination-section">
+            <h2>Destination</h2>
+            <div class="file-path">
+                <input type="text" id="destinationPath" placeholder="Destination path">
+                <button onclick="browseDestination()">Browse</button>
+            </div>
+        </div>
+
+        <div class="transfer-controls">
+            <button id="transferBtn" onclick="transferFile()" class="transfer-button">Transfer File</button>
+        </div>
+
+        <div class="transfer-status">
+            <div id="progressBar" class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="statusMessage"></p>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
